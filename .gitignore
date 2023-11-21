@@ -13,6 +13,7 @@ src/venv/
 src/build/
 src/dist/
 src/bat/
+src/result_image/
 *.spec
 
 # logs
@@ -27,7 +28,7 @@ src/logs/
 # other
 *.zip
 *.exe
-*.webp
+
 
 # config
 config.toml
