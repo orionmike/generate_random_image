@@ -39,6 +39,7 @@ try:
 
     BG_START, BG_FINISH = config['image_color']['bg']
     FG_START, FG_FINISH = config['image_color']['fg']
+    BRD_START, BRD_FINISH = config['image_color']['border']
 
     PATH_DIR_RESULT = Path(f"{ABS_PATH}/{config['path']['result']}")
     FILE_NAME_TEMPLATE = config['path']['file_name_template']
@@ -48,10 +49,10 @@ try:
     logger.remove()
     logger.add(f'{ABS_PATH}/logs/{log_file_name}_error.log', format='{time} {level} {message}', level='ERROR', rotation='1 day')
 
-    print(f'{datetime.now().strftime("%Y-%m-%d %H:%M:%S")} start app: {APP_NAME}')
-    print(f'{IND} python {sys.version_info.major}.{sys.version_info.minor}')
-    print(f'{IND} config loaded: OK')
-    print()
+    # print(f'{datetime.now().strftime("%Y-%m-%d %H:%M:%S")} start app: {APP_NAME}')
+    # print(f'{IND} python {sys.version_info.major}.{sys.version_info.minor}')
+    # print(f'{IND} config loaded: OK')
+    # print()
 
 except Exception as e:
     raise Exception(f'config load -> error: {e}')
