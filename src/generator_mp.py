@@ -9,12 +9,12 @@ import multiprocessing as mp
 
 def main():
     start = time.time()
-    
+
     active_core = round(mp.cpu_count()/2)
 
     print(active_core)
 
-    file_list = [f'image-{f}.webp' for f in range(200)]
+    file_list = [f'result_image/image-{f}.webp' for f in range(20)]
     # print(file_list)
 
     with mp.Pool(active_core) as pool:

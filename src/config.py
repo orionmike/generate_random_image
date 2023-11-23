@@ -8,7 +8,8 @@ from loguru import logger
 init(autoreset=True)
 
 
-ABS_PATH = Path('./src').resolve()  # windows
+# ABS_PATH = Path('./src').resolve()  # windows
+ABS_PATH = Path().resolve()  # windows
 # ABS_PATH = sys.path[0]  # linux
 APP_NAME = 'generate random image'
 
