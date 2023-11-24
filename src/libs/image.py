@@ -55,9 +55,12 @@ def generate_random_image(file_path: str, num: int = None) -> None:
 
             # save result image
 
-            create_path(path.parent)
+            create_path(path.parents[0].resolve())
 
-            if path.parent.exists():
+            # print(path.parents[0].resolve())
+            # print(path)
+
+            if path.parents[0].exists():
                 img.save(path)  # img.save(path.parent / file_name)
             else:
                 print(f'{IND} {Fore.RED}folder [{path.parent}] for save not found')

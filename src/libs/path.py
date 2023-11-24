@@ -3,6 +3,7 @@ from pathlib import Path
 
 
 def create_path(path: Path) -> None:
+    # print(path)
     if not path.exists():
         path_result = Path(path.parts[0])
         # print(path.parts)
